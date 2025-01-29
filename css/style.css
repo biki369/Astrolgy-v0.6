@@ -253,6 +253,11 @@
 }
 
 
+.breadcrumb-item:hover,
+.breadcrumb-item.active {
+    color: var(--primary) !important;
+    /* border-color: var(--primary) !important; */
+}
 /*** Section Title ***/
 .section-title h1 {
     position: relative;
