@@ -5,6 +5,7 @@
     --dark: #353535;
 }
 
+
 .fw-medium {
     font-weight: 500 !important;
 }
@@ -23,6 +24,60 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
+}
+/* Floating button   */
+floating-btns {
+    /* position: fixed; */
+    /* bottom: 20px;
+    right: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+    background-color: black;
+  
+}
+
+.whatsapp-button, .call-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button {
+    background-color: #25D366; /* WhatsApp green color */
+}
+
+.call-button {
+    background-color: #007bff; /* Call button blue color */
+}
+
+.whatsapp-button:hover, .call-button:hover {
+    transform: scale(1.1) ;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.6) ;
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-button, .call-button {
+    animation: float 3s ease-in-out infinite;
 }
 
 
@@ -316,7 +371,7 @@
 }
 
 /* whats app icon */
-.service-item img.whts-icon{
+.service-item img.white-icon{
     object-fit: cover;
     width: 26px;
     height: 26px;
@@ -636,4 +691,62 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+
+/* =======================Gallery Section */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.26rem;
+    padding: 2.3rem;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.gallery-item {
+    /* flex: 1 1 calc(25% - 30px); */
+    max-width: calc(20% - 30px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 260px;
+    height: 360px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 calc(100% - 30px);
+        max-width: calc(100% - 30px);
+    }
+}
+
+/* =================== about image  */
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
