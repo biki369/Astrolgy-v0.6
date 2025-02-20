@@ -750,3 +750,6 @@ floating-btns {
     justify-content: center;
     align-items: center;
 }
+.why-us-ul li{
+    margin: 10px 0px;
+}
